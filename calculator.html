@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+  </head>
+  <body>
+    <div id="container">
+      <div id="header">tip calculator</div>
+      <form>
+        <label for="bill-amount">How much was your bill?</label>
+        <div>
+          <span>$&nbsp;</span>
+          <input
+            id="bill-amount"
+            name="bill-amount"
+            placeholder="bill amount"
+            type="number"
+            required
+          />
+        </div>
+        <label for="service-rating">How was your service?</label>
+        <select id="service-rating" name="service-rating">
+          <option value="5">The absolute best!</option>
+          <option value="4">Better than expected</option>
+          <option value="3">Satisfactory</option>
+          <option value="2">Could have been better</option>
+          <option value="1">I won't be coming back</option>
+          <option value="0" selected>--select an option--</option>
+        </select>
+        <label for="number-of-people"
+          >How many people are sharing the bill?</label
+        >
+        <input
+          id="number-of-people"
+          placeholder="number of people"
+          type="number"
+          name="number-of-people"
+          value=1
+          required
+        />
+        <button id="calculate" type="button" onclick="calculateTip()">calculate!</button>
+      </form>
+      <div id="tip-message">
+        <div id="tip-text">Tip Amount</div>
+        <div id="tip-amount">0.00</div>
+        <div id="tip-each">each</div>
+      </div>
+    </div>
+    <script src="calculator.js"></script>
+  </body>
+</html>
